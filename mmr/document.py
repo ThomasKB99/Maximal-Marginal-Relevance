@@ -30,7 +30,6 @@ class Document(object):
     def del_punc(self):
         """Remove punc."""
         self._term = self._term.translate(
-        	None,
         	string.punctuation
         	)
         return self
