@@ -59,7 +59,7 @@ def _mmr(lambda_score, doc_current, docs_unranked, docs_selected, initial_rankin
 
 def rank(initial_ranking, lambda_score):
 	"""Ranking based on mmr score."""
-	final_ranking = [{'doc': initial_ranking['doc'].tolist()[0], 'mmr': 'top'}]
+	final_ranking = [{'doc': initial_ranking['doc'].tolist()[0], 'mmr': 'initial_ranking['score'].tolist()[0]'}]
 	sim_matrix = _build_sim_matrix(initial_ranking)
 	docs_unranked = initial_ranking['doc'].tolist()[1:]
 	for d in tqdm(docs_unranked):
